@@ -1,15 +1,13 @@
-// Total score when X/Y/Z is your choice
 pub fn part_one(lines: Vec<String>) -> i32 {
     convert_lines_to_pairs(lines)
-    .iter()
-    .map(|(lhs, rhs)| {
-        lhs.chars().filter(|c| rhs.contains(*c)).collect::<Vec<char>>()[0]
-    })
-    .map(|c| get_priority(c))
-    .sum()
+        .iter()
+        .map(|(lhs, rhs)| {
+            lhs.chars().filter(|c| rhs.contains(*c)).collect::<Vec<char>>()[0]
+        })
+        .map(|c| get_priority(c))
+        .sum()
 }
 
-// Total score when X/Y/Z is your choice
 pub fn part_two(lines: Vec<String>) -> i32 {
     lines
         .chunks(3)
