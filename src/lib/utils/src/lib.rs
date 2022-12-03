@@ -11,9 +11,7 @@ pub fn read_lines(file_path: String) -> Vec<String> {
     let file = File::open(file_path).expect("Should have been able to read the file");
     let reader = BufReader::new(file);
 
-    let lines: Vec<String> = reader.lines().map(|l| l.unwrap()).collect();
-
-    lines
+    reader.lines().map(|l| l.unwrap()).collect()
 }
 
 // TODO: Add tests
