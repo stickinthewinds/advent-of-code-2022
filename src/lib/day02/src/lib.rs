@@ -1,17 +1,17 @@
 // Total score when X/Y/Z is your choice
 pub fn part_one(lines: Vec<String>) -> i32 {
     convert_lines_to_pairs(lines)
-    .iter()
-    .map(|(o, y)| get_score_for_round(*o, *y))
-    .sum()
+        .iter()
+        .map(|(o, y)| get_score_for_round(*o, *y))
+        .sum()
 }
 
 // Total score when X/Y/Z is the round result
 pub fn part_two(lines: Vec<String>) -> i32 {
     convert_lines_to_pairs(lines)
-    .iter()
-    .map(|(o, y)| get_score_for_round(*o, determine_choice(*o, *y)))
-    .sum()
+        .iter()
+        .map(|(o, y)| get_score_for_round(*o, determine_choice(*o, *y)))
+        .sum()
 }
 
 fn letter_as_number(c: char) -> i32 {
