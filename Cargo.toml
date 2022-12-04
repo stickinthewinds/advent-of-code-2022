@@ -13,4 +13,5 @@ members = [
 day01 = { path = "src/lib/day01" }
 day02 = { path = "src/lib/day02" }
 day03 = { path = "src/lib/day03" }
+day04 = { path = "src/lib/day04" }
 utils = { path = "src/lib/utils" }
