@@ -15,4 +15,5 @@ day02 = { path = "src/lib/day02" }
 day03 = { path = "src/lib/day03" }
 day04 = { path = "src/lib/day04" }
 day05 = { path = "src/lib/day05" }
+day06 = { path = "src/lib/day06" }
 utils = { path = "src/lib/utils" }
