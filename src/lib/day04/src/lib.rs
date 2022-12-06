@@ -3,25 +3,15 @@ use std::cmp::Ordering::*;
 pub fn part_one(lines: Vec<String>) -> i32 {
     convert_lines_to_pairs(lines)
         .iter()
-        .map(|(lhs, rhs)| {
-            if is_overlapping(lhs, rhs, false) {
-                return 1
-            }
-            0
-        })
-        .sum()
+        .filter(|(lhs, rhs)| is_overlapping(lhs, rhs, false))
+        .count() as i32
 }
 
 pub fn part_two(lines: Vec<String>) -> i32 {
     convert_lines_to_pairs(lines)
         .iter()
-        .map(|(lhs, rhs)| {
-            if is_overlapping(lhs, rhs, true) {
-                return 1
-            }
-            0
-        })
-        .sum()
+        .filter(|(lhs, rhs)| is_overlapping(lhs, rhs, true))
+        .count() as i32
 }
 
 fn is_overlapping(first: &str, second: &str, allow_partial: bool) -> bool{
